@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ascendex Global Trading - Coming Soon</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
         }
     </script>
+    <!-- Google Fonts: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -40,21 +43,25 @@
         }
     </style>
 </head>
-<body class="text-slate-900 dark:text-white h-screen w-screen max-h-screen max-w-full overflow-hidden flex flex-col justify-between relative select-none">
+<body class="text-slate-900 dark:text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden select-none">
 
-    <div class="glow-shape bg-[#C5A059] w-72 h-72 top-[-10%] left-[-5%] pointer-events-none"></div>
-    <div class="glow-shape bg-[#002349] dark:bg-blue-900 w-96 h-96 bottom-[-10%] right-[-5%] pointer-events-none"></div>
+    <!-- Decorative Corporate Glow Elements -->
+    <div class="glow-shape bg-[#C5A059] w-72 h-72 top-[-10%] left-[-5%]"></div>
+    <div class="glow-shape bg-[#002349] dark:bg-blue-900 w-96 h-96 bottom-[-10%] right-[-5%]"></div>
 
-    <header class="container mx-auto px-6 pt-4 md:pt-6 flex-shrink-0 relative z-10">
+    <!-- Header / Logo Section -->
+    <header class="container mx-auto px-6 py-8 relative z-10">
         <div class="flex items-center justify-between">
+            <!-- Brand Logo Integration -->
             <a href="#" class="flex items-center space-x-3">
-                <img src="ASCENDEX-GLOBAL.png" alt="ASCENDEX GLOBAL" class="h-10 md:h-14 w-auto object-contain dark:brightness-0 dark:invert transition duration-300" onerror="this.style.display='none'; document.getElementById('text-logo').style.display='block';">
+                <img src="ASCENDEX-GLOBAL.png" alt="ASCENDEX GLOBAL" class="h-16 w-auto object-contain dark:brightness-0 dark:invert transition duration-300" onerror="this.style.display='none'; document.getElementById('text-logo').style.display='block';">
                 <div id="text-logo" class="hidden text-xl font-extrabold tracking-wider text-slate-900 dark:text-white">
                     ASCENDEX <span class="text-[#C5A059]">GLOBAL</span>
                 </div>
             </a>
             
-            <button id="theme-toggle" class="relative inline-flex h-6 w-11 flex-shrink-0 items-center rounded-full bg-slate-300 dark:bg-slate-700 transition-colors focus:outline-none" aria-label="Toggle Theme">
+            <!-- Theme Toggle Switch (Contact Us removed from beside it) -->
+            <button id="theme-toggle" class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-300 dark:bg-slate-700 transition-colors focus:outline-none" aria-label="Toggle Theme">
                 <span id="theme-toggle-dot" class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1 dark:translate-x-6 flex items-center justify-center">
                     <i id="theme-icon" class="fas fa-sun text-[10px] text-amber-500"></i>
                 </span>
@@ -62,60 +69,66 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-2 flex flex-col items-center text-center justify-center flex-grow min-h-0 relative z-10">
+    <!-- Main Hero / Content Section -->
+    <main class="container mx-auto px-6 py-12 flex flex-col items-center text-center justify-center flex-grow relative z-10">
         
-        <div class="max-w-4xl w-full flex flex-col items-center justify-center space-y-4 md:space-y-6">
-            <div class="inline-flex items-center space-x-2 bg-slate-200/50 dark:bg-white/5 backdrop-blur-md rounded-full p-1 pr-3 text-xs font-medium text-slate-700 dark:text-gray-300 border border-slate-300/30 dark:border-white/10 mx-auto">
-                <span class="bg-[#C5A059] text-white dark:text-[#020b14] rounded-full px-2.5 py-0.5 font-bold uppercase tracking-wider text-[10px]">Official Notice</span>
-                <span class="truncate">Launching our global trading network soon.</span>
-            </div>
-
-            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-slate-900 dark:text-white">
-                Connecting Markets. <br>
-                <span class="bg-gradient-to-r from-[#b38f46] via-[#C5A059] to-[#8a6a2a] dark:from-[#e9d5a1] dark:via-[#C5A059] dark:to-[#a17e3b] text-transparent bg-clip-text">Ascending Global Trade.</span>
-            </h1>
-            
-            <p class="text-slate-600 dark:text-gray-400 text-sm md:text-lg max-w-2xl mx-auto leading-relaxed">
-                We are fine-tuning our institutional trading infrastructure. Leave your corporate email below to receive an official invitation and key platform updates upon deployment.
-            </p>
-
-            <div class="grid grid-cols-4 gap-3 md:gap-6 max-w-xl w-full mx-auto">
-                <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-2.5 md:p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
-                    <span id="days" class="text-2xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">00</span>
-                    <span class="text-[9px] md:text-xs uppercase tracking-widest text-[#C5A059] font-semibold mt-0.5">Days</span>
-                </div>
-                <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-2.5 md:p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
-                    <span id="hours" class="text-2xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">00</span>
-                    <span class="text-[9px] md:text-xs uppercase tracking-widest text-[#C5A059] font-semibold mt-0.5">Hours</span>
-                </div>
-                <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-2.5 md:p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
-                    <span id="minutes" class="text-2xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">00</span>
-                    <span class="text-[9px] md:text-xs uppercase tracking-widest text-[#C5A059] font-semibold mt-0.5">Mins</span>
-                </div>
-                <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-2.5 md:p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
-                    <span id="seconds" class="text-2xl md:text-4xl font-bold text-[#C5A059] tracking-tight">00</span>
-                    <span class="text-[9px] md:text-xs uppercase tracking-widest text-slate-400 font-semibold mt-0.5">Secs</span>
-                </div>
-            </div>
-
-            <form id="notify" class="w-full max-w-md bg-white dark:bg-white/5 p-1.5 rounded-full border border-slate-300 dark:border-white/10 backdrop-blur-md flex items-center shadow-xl focus-within:border-[#C5A059] dark:focus-within:border-[#C5A059] transition duration-300 mx-auto">
-                <input type="email" placeholder="Enter business email address" required
-                       class="bg-transparent w-full pl-4 md:pl-5 pr-2 py-2 text-xs md:text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none rounded-full">
-                <button type="submit" 
-                        class="bg-gradient-to-r from-[#C5A059] to-[#a17e3b] hover:from-[#e9d5a1] hover:to-[#C5A059] text-white dark:text-[#020b14] font-bold text-xs md:text-sm px-4 md:px-6 py-2 rounded-full shadow-lg transition duration-300 whitespace-nowrap tracking-wide">
-                    Notify Me
-                </button>
-            </form>
+        <!-- Premium Corporate Announcement Badge -->
+        <div class="inline-flex items-center space-x-2 bg-slate-200/50 dark:bg-white/5 backdrop-blur-md rounded-full p-1 pr-3 text-xs font-medium text-slate-700 dark:text-gray-300 mb-6 border border-slate-300/30 dark:border-white/10">
+            <span class="bg-[#C5A059] text-white dark:text-[#020b14] rounded-full px-2.5 py-0.5 font-bold uppercase tracking-wider text-[10px]">Official Notice</span>
+            <span>Launching our global trading network soon.</span>
         </div>
+
+        <!-- Main Heading -->
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight max-w-4xl leading-tight mb-6 text-slate-900 dark:text-white">
+            Connecting Markets. <br>
+            <span class="bg-gradient-to-r from-[#b38f46] via-[#C5A059] to-[#8a6a2a] dark:from-[#e9d5a1] dark:via-[#C5A059] dark:to-[#a17e3b] text-transparent bg-clip-text">Ascending Global Trade.</span>
+        </h1>
+        
+        <p class="text-slate-600 dark:text-gray-400 text-base md:text-lg max-w-2xl mb-12 leading-relaxed">
+            We are fine-tuning our institutional trading infrastructure. Leave your corporate email below to receive an official invitation and key platform updates upon deployment.
+        </p>
+
+        <!-- Corporate Countdown Timer Section -->
+        <div class="grid grid-cols-4 gap-4 md:gap-6 max-w-xl w-full mb-12">
+            <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
+                <span id="days" class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#C5A059] font-semibold mt-1">Days</span>
+            </div>
+            <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
+                <span id="hours" class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#C5A059] font-semibold mt-1">Hours</span>
+            </div>
+            <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
+                <span id="minutes" class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-[#C5A059] font-semibold mt-1">Mins</span>
+            </div>
+            <div class="bg-white dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-2xl p-4 flex flex-col justify-center shadow-xl dark:shadow-2xl">
+                <span id="seconds" class="text-3xl md:text-4xl font-bold text-[#C5A059] tracking-tight">00</span>
+                <span class="text-[10px] md:text-xs uppercase tracking-widest text-slate-400 font-semibold mt-1">Secs</span>
+            </div>
+        </div>
+
+        <!-- Subscription / Lead Generation Form -->
+        <form id="notify" class="w-full max-w-md bg-white dark:bg-white/5 p-1.5 rounded-full border border-slate-300 dark:border-white/10 backdrop-blur-md flex items-center shadow-xl focus-within:border-[#C5A059] dark:focus-within:border-[#C5A059] transition duration-300">
+            <input type="email" placeholder="Enter business email address" required
+                   class="bg-transparent w-full pl-5 pr-2 py-3 text-sm text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-gray-500 focus:outline-none rounded-full">
+            <button type="submit" 
+                    class="bg-gradient-to-r from-[#C5A059] to-[#a17e3b] hover:from-[#e9d5a1] hover:to-[#C5A059] text-white dark:text-[#020b14] font-bold text-sm px-6 py-3 rounded-full shadow-lg transition duration-300 whitespace-nowrap tracking-wide">
+                Notify Me
+            </button>
+        </form>
 
     </main>
 
-    <footer class="container mx-auto px-6 py-4 flex-shrink-0 relative z-10 text-center">
+    <!-- Footer / Corporate Compliance Section -->
+    <footer class="container mx-auto px-6 py-8 relative z-10 text-center">
+        <!-- Social Icons fully removed. Aligning copyright message to center -->
         <div class="text-xs text-slate-500 dark:text-gray-500 tracking-wide">
             <p>&copy; 2026 ASCENDEX GLOBAL TRADING PTE LTD. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Toggle & Timer JavaScript Logic -->
     <script>
         // --- Light / Dark Mode Controller ---
         const htmlElement = document.documentElement;
@@ -134,7 +147,7 @@
 
         // --- Countdown Timer ---
         const launchDate = new Date();
-        launchDate.setDate(launchDate.getDate() + 30); 
+        launchDate.setDate(launchDate.getDate() + 45); 
 
         function updateCountdown() {
             const now = new Date().getTime();
@@ -145,23 +158,14 @@
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            // Using proper checks to ensure the elements exist before rewriting text values
-            const daysEl = document.getElementById("days");
-            const hoursEl = document.getElementById("hours");
-            const minsEl = document.getElementById("minutes");
-            const secsEl = document.getElementById("seconds");
-
-            if(daysEl) daysEl.innerText = days < 10 ? "0" + days : days;
-            if(hoursEl) hoursEl.innerText = hours < 10 ? "0" + hours : hours;
-            if(minsEl) minsEl.innerText = minutes < 10 ? "0" + minutes : minutes;
-            if(secsEl) secsEl.innerText = seconds < 10 ? "0" + seconds : seconds;
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
 
             if (distance < 0) {
                 clearInterval(interval);
-                if(daysEl) daysEl.innerText = "00";
-                if(hoursEl) hoursEl.innerText = "00";
-                if(minsEl) minsEl.innerText = "00";
-                if(secsEl) secsEl.innerText = "00";
+                document.querySelectorAll("[id^='day'], [id^='hour'], [id^='min'], [id^='sec']").forEach(el => el.innerText = "00");
             }
         }
 
